@@ -1,0 +1,56 @@
+PRD: 
+🧩 Product Requirements Document (PRD)
+Game Title (Working Name): Find & Match Adventure!
+
+🎯 Overview
+Find & Match Adventure is a fun, kid-friendly web game where children explore a colorful, detailed image and try to find specific hidden objects. The goal is to help kids improve visual recognition, focus, and memory through engaging gameplay and rewarding feedback.
+
+🕹️ Core Gameplay
+* The game screen is divided into two sections:
+    * Left Panel (Main Scene): A large, detailed image containing multiple hidden objects (e.g., a jungle, a beach, a city scene).
+    * Right Panel (Target Object): Displays a smaller image of one object that the player must find within the larger scene.
+* The player clicks or taps on the location of the target object in the main scene.
+    * If correct, the object is highlighted, and the player earns +1 point.
+    * A short sound effect or animation confirms the success (e.g., sparkle or cheer).
+    * A new target object then appears for the next round.
+* The game continues until all target objects are found.
+    * When completed, a celebratory animation or message (e.g., “Great job! You found them all!”) appears, and the total score is displayed.
+
+🧠 Learning Objectives
+* Improve attention to detail and pattern recognition.
+* Develop hand-eye coordination and focus.
+* Encourage exploration and visual problem-solving.
+
+🧒 Target Audience
+* Age Group: 4–9 years old
+* Platform: Web-based (desktop, tablet, and mobile browsers)
+* Accessibility: Designed with bright visuals, large clickable areas, and simple navigation for early readers.
+
+💡 Key Features
+1. Simple User Interface
+    * Large buttons and clear visuals.
+    * Colorful and engaging design.
+2. Progressive Difficulty
+    * Levels increase in complexity with more objects or detailed backgrounds.
+3. Score & Rewards
+    * Points for each correct find.
+    * Optional badges or stars for completion milestones.
+4. Audio & Visual Feedback
+    * Positive sounds and animations to celebrate correct matches.
+    * Gentle hints if the player struggles.
+5. Replayability
+    * Different image sets (themes such as “Under the Sea,” “At the Park,” or “Space Adventure”).
+    * Randomized object order to keep gameplay fresh.
+
+⚙️ Technical Requirements
+* Frontend: HTML5, CSS, JavaScript (React or similar framework optional)
+* Image Rendering: Responsive scaling for various screen sizes
+* Interaction: Click/tap detection and coordinate mapping for object regions
+* Score Tracking: In-session scoring (optional future integration with user profiles)
+* Assets: Optimized image files, sound effects, and animations
+
+🧩 Future Enhancements (Nice-to-Have)
+* Timer-based challenges for older kids
+* Multiplayer or cooperative “find together” mode
+* Story or level progression system
+* Voice guidance or narration for non-readers

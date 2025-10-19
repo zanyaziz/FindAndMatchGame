@@ -1,0 +1,189 @@
+FIND & MATCH ADVENTURE
+TECHNICAL DESIGN DOCUMENT (TDD)
+Version: 1.0
+Date: October 2025
+
+SYSTEM OVERVIEW
+
+Find & Match Adventure is a kids’ web-based game where players identify and click on objects hidden within a large image.
+The game uses a client–server architecture.
+The frontend handles user interaction and rendering.
+The backend manages image metadata, object coordinates, and scoring logic.
+
+ARCHITECTURE SUMMARY
+
+Components:
+
+Frontend (Client): Renders the UI, handles clicks/taps, communicates with backend.
+
+Backend (Server): Provides APIs for fetching images, validating clicks, and tracking scores.
+
+Database: Stores image metadata, bounding box coordinates, and level configuration.
+
+File Storage: Stores actual image and audio files.
+
+CDN (optional): Delivers assets quickly for global users.
+
+FRONTEND DESIGN
+
+Technology Stack:
+
+Framework: React.js (TypeScript)
+
+State Management: Redux Toolkit or React Context API
+
+UI Library: Tailwind CSS
+
+Animation: Framer Motion
+
+Canvas/Rendering: HTML5 Canvas or SVG overlays
+
+Audio: Web Audio API
+
+Build Tool: Vite or Next.js
+
+Hosting: Vercel or Netlify
+
+Responsibilities:
+
+Render main image area and target object panel.
+
+Detect user clicks/taps and send coordinates to backend.
+
+Display visual/audio feedback.
+
+Manage session-level state (score, current object, etc.).
+
+Fetch level and object metadata from backend APIs.
+
+Interaction Flow:
+
+Client loads level data: GET /api/level/:id
+
+Displays main image and target object.
+
+User clicks/taps on image → client sends coordinates: POST /api/validate-click
+
+Server validates click and responds with result.
+
+Client updates score and loads next object.
+
+BACKEND DESIGN
+
+Technology Stack:
+
+Language/Framework: Node.js with Express.js
+
+Database: SQLite or PostgreSQL
+
+ORM: Prisma
+
+File Storage: AWS S3, Google Cloud Storage, or Supabase Storage
+
+Authentication (optional): JSON Web Tokens (JWT)
+
+Hosting: AWS Lambda, Render, or Railway
+
+API Format: RESTful JSON endpoints
+
+API Endpoints:
+
+GET /api/levels → List of game levels
+
+GET /api/level/:id → Level metadata and objects
+
+POST /api/validate-click → Validates click and updates score
+
+GET /api/score/:sessionId → Returns session score
+
+POST /api/reset/:sessionId → Resets session progress
+
+Validation Logic Example:
+If clickX and clickY are within object bounding box (minX, minY, maxX, maxY), return true and update score.
+
+DATA MODEL
+
+TABLE: levels
+
+id (INT, PK)
+
+title (TEXT)
+
+image_url (TEXT)
+
+thumbnail (TEXT)
+
+TABLE: objects
+
+id (INT, PK)
+
+level_id (INT, FK to levels.id)
+
+name (TEXT)
+
+image_url (TEXT)
+
+minX (INT)
+
+minY (INT)
+
+maxX (INT)
+
+maxY (INT)
+
+TABLE: sessions (optional)
+
+id (UUID)
+
+user_id (UUID, optional)
+
+score (INT)
+
+current_object_id (INT)
+
+FILE STORAGE
+
+All images and sounds stored as:
+
+/levels/{level_id}/scene.jpg
+
+/levels/{level_id}/objects/{object_id}.png
+
+Stored in AWS S3 or Supabase Storage.
+URLs saved in database under image_url fields.
+
+SECURITY AND PERFORMANCE
+
+Use signed URLs or public-read S3 objects for assets.
+
+Validate all incoming click data.
+
+Enable CORS for frontend domain.
+
+Cache static assets via CDN.
+
+Use lazy loading for large images.
+
+DEPLOYMENT AND DEVOPS
+
+Recommended Platforms:
+
+Frontend: Vercel or Netlify
+
+Backend: Railway, Render, or AWS Lambda
+
+Database: Supabase or Neon (Postgres)
+
+File Storage: AWS S3 or Supabase Storage
+
+CI/CD: GitHub Actions integrated with hosting providers
+
+FUTURE ENHANCEMENTS
+
+WebSocket support for real-time updates (multiplayer).
+
+Admin annotation tool to mark object coordinates visually.
+
+GraphQL API for flexible querying.
+
+User profiles and leaderboards via Firebase Auth.
