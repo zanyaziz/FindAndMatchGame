@@ -48,22 +48,16 @@
   
   <!-- Red Bird - coordinates (135, 165) to (165, 195) -->
   <g transform="translate(150, 180)">
-    <circle cx="0" cy="0" r="12" fill="#FF0000"/>
-    <path d="M-8 0 L-3 -5 L3 0 L-3 5 Z" fill="#FF0000"/>
-    <circle cx="-3" cy="-3" r="2" fill="#FFF"/>
-    <circle cx="3" cy="-3" r="2" fill="#FFF"/>
-    <circle cx="-3" cy="-3" r="1" fill="#000"/>
-    <circle cx="3" cy="-3" r="1" fill="#000"/>
-    <path d="M-6 3 Q0 6 6 3" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="50" cy="50" r="25" fill="#FF0000"/>
+  <path d="M35 50 L45 45 L55 50 L45 55 Z" fill="#FF0000"/>
+  <circle cx="45" cy="45" r="3" fill="#FFFFFF"/>
+  <path d="M65 45 Q75 50 65 55" stroke="#000000" stroke-width="2" fill="none"/>
   </g>
   
   <!-- Green Tree (small) - coordinates (335, 300) to (385, 330) -->
   <g transform="translate(360, 315)">
-    <rect x="-8" y="0" width="16" height="20" fill="#8B4513"/>
-    <circle cx="0" cy="0" r="20" fill="#32CD32"/>
-    <circle cx="-8" cy="-5" r="8" fill="#228B22"/>
-    <circle cx="8" cy="-5" r="8" fill="#228B22"/>
-    <circle cx="0" cy="-10" r="6" fill="#32CD32"/>
+  <rect x="45" y="60" width="10" height="40" fill="#8B4513"/>
+  <circle cx="50" cy="60" r="30" fill="#32CD32"/>
   </g>
   
   <!-- Blue Flower - coordinates (538, 238) to (562, 262) -->

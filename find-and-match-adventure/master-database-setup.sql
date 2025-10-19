@@ -55,7 +55,8 @@ CREATE TABLE sessions (
 INSERT INTO levels (title, image_url, thumbnail) VALUES
 ('Jungle Adventure', '/images/jungle-scene.svg', '/images/jungle-scene.svg'),
 ('Ocean Discovery', '/images/ocean-scene.svg', '/images/ocean-scene.svg'),
-('Space Explorer', '/images/space-scene.svg', '/images/space-scene.svg');
+('Space Explorer', '/images/space-scene.svg', '/images/space-scene.svg'),
+('Farm Adventure', '/images/farm-scene.svg', '/images/farm-scene.svg');
 
 -- =====================================================
 -- INSERT JUNGLE ADVENTURE OBJECTS (Level ID = 1)
@@ -110,6 +111,25 @@ INSERT INTO objects (level_id, name, image_url, minX, minY, maxX, maxY) VALUES
 -- Meteor: transform="translate(650, 400)" with radius 12
 -- Actual bounds: (638, 388) to (662, 412)
 (3, 'Meteor', '/images/objects/meteor.svg', 638, 388, 662, 412);
+
+
+-- =====================================================
+-- INSERT Farm Adventure OBJECTS (Level ID = 3)
+-- CORRECTED COORDINATES
+-- =====================================================
+
+INSERT INTO objects (level_id, name, image_url, minX, minY, maxX, maxY) VALUES
+-- Tractor: transform="translate(100, 450)" with radius 20
+-- Bounds: (80, 430) to (120, 470)
+(4, 'Tractor', '/images/objects/tractor.svg', 80, 430, 120, 470),
+
+-- Cow: transform="translate(400, 420)" with radius 25
+-- Bounds: (375, 395) to (425, 445)
+(4, 'Cow', '/images/objects/cow.svg', 375, 395, 425, 445),
+
+-- Chicken: transform="translate(600, 380)" with radius 12
+-- Bounds: (588, 368) to (612, 392)
+(4, 'Chicken', '/images/objects/chicken.svg', 588, 368, 612, 392);
 
 -- =====================================================
 -- VERIFY DATA
