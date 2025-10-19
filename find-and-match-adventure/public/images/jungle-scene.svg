@@ -1,0 +1,107 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ground gradient -->
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="800" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="200" fill="url(#groundGradient)"/>
+  
+  <!-- Large trees in background -->
+  <rect x="80" y="200" width="60" height="200" fill="#8B4513"/>
+  <circle cx="110" cy="200" r="50" fill="#228B22"/>
+  
+  <rect x="280" y="150" width="60" height="250" fill="#8B4513"/>
+  <circle cx="310" cy="150" r="60" fill="#32CD32"/>
+  
+  <rect x="480" y="180" width="60" height="220" fill="#8B4513"/>
+  <circle cx="510" cy="180" r="55" fill="#228B22"/>
+  
+  <!-- Additional trees for depth -->
+  <rect x="200" y="250" width="40" height="150" fill="#8B4513"/>
+  <circle cx="220" cy="250" r="35" fill="#32CD32"/>
+  
+  <rect x="400" y="220" width="45" height="180" fill="#8B4513"/>
+  <circle cx="422" cy="220" r="40" fill="#228B22"/>
+  
+  <!-- Bushes and grass -->
+  <ellipse cx="150" cy="420" rx="30" ry="15" fill="#32CD32"/>
+  <ellipse cx="250" cy="430" rx="25" ry="12" fill="#228B22"/>
+  <ellipse cx="350" cy="425" rx="35" ry="18" fill="#32CD32"/>
+  <ellipse cx="450" cy="435" rx="28" ry="14" fill="#228B22"/>
+  <ellipse cx="550" cy="420" rx="32" ry="16" fill="#32CD32"/>
+  <ellipse cx="650" cy="430" rx="26" ry="13" fill="#228B22"/>
+  
+  <!-- Hidden objects with correct coordinates -->
+  
+  <!-- Red Bird - coordinates (135, 165) to (165, 195) -->
+  <g transform="translate(150, 180)">
+    <circle cx="0" cy="0" r="12" fill="#FF0000"/>
+    <path d="M-8 0 L-3 -5 L3 0 L-3 5 Z" fill="#FF0000"/>
+    <circle cx="-3" cy="-3" r="2" fill="#FFF"/>
+    <circle cx="3" cy="-3" r="2" fill="#FFF"/>
+    <circle cx="-3" cy="-3" r="1" fill="#000"/>
+    <circle cx="3" cy="-3" r="1" fill="#000"/>
+    <path d="M-6 3 Q0 6 6 3" stroke="#000" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Green Tree (small) - coordinates (335, 300) to (385, 330) -->
+  <g transform="translate(360, 315)">
+    <rect x="-8" y="0" width="16" height="20" fill="#8B4513"/>
+    <circle cx="0" cy="0" r="20" fill="#32CD32"/>
+    <circle cx="-8" cy="-5" r="8" fill="#228B22"/>
+    <circle cx="8" cy="-5" r="8" fill="#228B22"/>
+    <circle cx="0" cy="-10" r="6" fill="#32CD32"/>
+  </g>
+  
+  <!-- Blue Flower - coordinates (538, 238) to (562, 262) -->
+  <g transform="translate(550, 250)">
+    <circle cx="0" cy="0" r="10" fill="#0000FF"/>
+    <circle cx="0" cy="0" r="6" fill="#87CEEB"/>
+    <circle cx="0" cy="0" r="3" fill="#FFD700"/>
+    <rect x="-2" y="0" width="4" height="15" fill="#228B22"/>
+    <ellipse cx="-6" cy="-6" rx="3" ry="2" fill="#0000FF" opacity="0.7"/>
+    <ellipse cx="6" cy="-6" rx="3" ry="2" fill="#0000FF" opacity="0.7"/>
+    <ellipse cx="-6" cy="6" rx="3" ry="2" fill="#0000FF" opacity="0.7"/>
+    <ellipse cx="6" cy="6" rx="3" ry="2" fill="#0000FF" opacity="0.7"/>
+  </g>
+  
+  <!-- Additional decorative elements -->
+  <!-- Butterflies -->
+  <g transform="translate(200, 150)">
+    <ellipse cx="0" cy="0" rx="8" ry="4" fill="#FF69B4"/>
+    <ellipse cx="0" cy="0" rx="6" ry="3" fill="#FFB6C1"/>
+    <circle cx="0" cy="0" r="2" fill="#000"/>
+  </g>
+  
+  <g transform="translate(600, 120)">
+    <ellipse cx="0" cy="0" rx="8" ry="4" fill="#FFD700"/>
+    <ellipse cx="0" cy="0" rx="6" ry="3" fill="#FFFF99"/>
+    <circle cx="0" cy="0" r="2" fill="#000"/>
+  </g>
+  
+  <!-- Clouds -->
+  <ellipse cx="100" cy="80" rx="40" ry="20" fill="white" opacity="0.8"/>
+  <ellipse cx="120" cy="80" rx="30" ry="15" fill="white" opacity="0.8"/>
+  <ellipse cx="80" cy="80" rx="25" ry="12" fill="white" opacity="0.8"/>
+  
+  <ellipse cx="500" cy="60" rx="35" ry="18" fill="white" opacity="0.7"/>
+  <ellipse cx="520" cy="60" rx="25" ry="12" fill="white" opacity="0.7"/>
+  <ellipse cx="480" cy="60" rx="20" ry="10" fill="white" opacity="0.7"/>
+  
+  <!-- Sun -->
+  <circle cx="650" cy="100" r="30" fill="#FFD700"/>
+  <circle cx="650" cy="100" r="25" fill="#FFFF00"/>
+</svg>

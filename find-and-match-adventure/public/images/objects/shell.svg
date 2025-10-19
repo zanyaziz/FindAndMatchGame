@@ -1,0 +1,18 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(50, 50)">
+    <!-- Shell outer -->
+    <ellipse cx="0" cy="0" rx="20" ry="30" fill="#F0E68C"/>
+    <!-- Shell inner -->
+    <ellipse cx="0" cy="0" rx="15" ry="25" fill="#FFE4B5"/>
+    <!-- Shell opening -->
+    <path d="M-15,0 Q0,-8 15,0 Q0,8 -15,0" fill="#DDA0DD"/>
+    <!-- Shell ridges -->
+    <path d="M-18,-20 Q-12,-15 -6,-20 Q0,-25 6,-20 Q12,-15 18,-20" stroke="#DAA520" stroke-width="2" fill="none"/>
+    <path d="M-18,-10 Q-12,-5 -6,-10 Q0,-15 6,-10 Q12,-5 18,-10" stroke="#DAA520" stroke-width="2" fill="none"/>
+    <path d="M-18,0 Q-12,5 -6,0 Q0,-5 6,0 Q12,5 18,0" stroke="#DAA520" stroke-width="2" fill="none"/>
+    <path d="M-18,10 Q-12,15 -6,10 Q0,5 6,10 Q12,15 18,10" stroke="#DAA520" stroke-width="2" fill="none"/>
+    <path d="M-18,20 Q-12,25 -6,20 Q0,15 6,20 Q12,25 18,20" stroke="#DAA520" stroke-width="2" fill="none"/>
+    <!-- Shell tip -->
+    <circle cx="0" cy="-25" r="3" fill="#DAA520"/>
+  </g>
+</svg>
