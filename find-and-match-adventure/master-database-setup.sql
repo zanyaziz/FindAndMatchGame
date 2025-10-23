@@ -66,11 +66,11 @@ INSERT INTO levels (title, image_url, thumbnail) VALUES
 INSERT INTO objects (level_id, name, image_url, minX, minY, maxX, maxY) VALUES
 -- Red Bird: transform="translate(150, 180)" with radius 12
 -- Actual bounds: (138, 168) to (162, 192)
-(1, 'Red Bird', '/images/objects/red-bird.svg', 138, 168, 162, 192),
+(1, 'Red Bird', '/images/objects/red-bird.svg', 150, 190, 230, 260),
 
 -- Green Tree: transform="translate(360, 315)" with radius 20
 -- Actual bounds: (340, 295) to (380, 335)
-(1, 'Green Tree', '/images/objects/green-tree.svg', 340, 295, 380, 335),
+(1, 'Green Tree', '/images/objects/green-tree.svg', 370, 340, 450, 410),
 
 -- Blue Flower: transform="translate(550, 250)" with radius 10
 -- Actual bounds: (540, 240) to (560, 260)
